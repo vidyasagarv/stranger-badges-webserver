@@ -69,7 +69,7 @@ var data = [
 var requestObj = {
     json: data,
     method: 'POST',
-    url: 'http://localhost:8000'
+    url: 'http://stranger-badges.herokuapp.com:80'
 };
 
 (function _request() {
