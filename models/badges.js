@@ -1,5 +1,6 @@
 'use strict';
 
+var host = process.env.BADGES_HOST || 'http://localhost:8000/badges';
 var request = require('request');
 
 /**
@@ -7,7 +8,7 @@ var request = require('request');
 *   @param {Function} callback
 */
 exports.get = function(callback){
-    request('http://localhost:8000/badges', function(err, response, body){
+    request(host, function(err, response, body){
         callback(err, JSON.parse(body));
     });
 };

@@ -3,10 +3,18 @@
 var express = require('express');
 var app = express();
 // var app = require('express')();
+
+/**
+ *  Allows third party clients to connect to the socket server
+ */
+app.use(function(request, response, next) {
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
-var subSocket =require('./lib/subscribe');
+var subSocket =require('./lib/socket');
 var badges = require('./models/badges');
 var port = process.env.PORT || 3000;
 
@@ -69,7 +77,7 @@ var data = [
 var requestObj = {
     json: data,
     method: 'POST',
-    url: 'http://redis-pubsub-server:80'
+    url: 'https://stranger-badges.herokuapp.com:80'
 };
 
 (function _request() {
