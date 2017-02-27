@@ -69,7 +69,7 @@ var data = [
 var requestObj = {
     json: data,
     method: 'POST',
-    url: 'http://stranger-badges.herokuapp.com:80'
+    url: 'http://redis-pubsub-server:80'
 };
 
 (function _request() {
