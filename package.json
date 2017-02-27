@@ -1,0 +1,26 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "node.js stranger-badges webserver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stranger",
+    "things",
+    "badges"
+  ],
+  "author": "vidyasagar",
+  "license": "MIT",
+  "dependencies": {
+    "arrandom": "0.0.3",
+    "axon": "^2.0.3",
+    "express": "^4.14.1",
+    "request": "^2.79.0",
+    "socket.io": "^1.7.3"
+  },
+  "engines": {
+    "node": "5.9.1"
+  }
+}
